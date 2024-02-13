@@ -122,7 +122,7 @@ public class AccountExtResourceProvider implements RealmResourceProvider {
         return getApplications(session, realm, user)
                 .filter(c -> !isAdminClient(c) || AdminPermissions.realms(session, realm, user).isAdmin())
                 .map(c -> modelToRepresentation(c, inUseClients, offlineClients, consentModels))
-                .sorted((c1, c2) -> c1.getClientId().compareTo(c2.getClientId()));
+                .sorted((c1, c2) -> c1.getName().compareTo(c2.getClientId()));
     }
 
     @Override
