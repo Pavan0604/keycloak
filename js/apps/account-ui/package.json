@@ -1,6 +1,6 @@
 {
   "name": "@keycloak/keycloak-account-ui",
-  "version": "999.0.0-SNAPSHOT",
+  "version": "26.0.6",
   "type": "module",
   "main": "lib/keycloak-account-ui.js",
   "types": "./lib/keycloak-account-ui.d.ts",
@@ -80,7 +80,7 @@
         "vite.config.ts"
       ],
       "output": [
-        "target/classes/theme/keycloak.v3/account/resources"
+        "target/classes/theme/demo-fix/account/resources"
       ]
     },
     "build-lib": {

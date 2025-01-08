@@ -1,7 +1,7 @@
 {
   "themes": [
     {
-      "name": "keycloak.v3",
+      "name": "demo-fix",
       "types": [
         "account"
       ]

@@ -5,7 +5,6 @@
     <base href="${resourceUrl}/">
     <link rel="icon" type="${properties.favIconType!'image/svg+xml'}" href="${resourceUrl}${properties.favIcon!'/favicon.svg'}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light${darkMode?then(' dark', '')}">
     <meta name="description" content="${properties.description!'The Account Console is a web-based interface for managing your account.'}">
     <title>${properties.title!'Account Management'}</title>
     <style>
@@ -58,25 +57,6 @@
         }
       }
     </script>
-    <#if darkMode>
-      <script type="module" async blocking="render">
-          const DARK_MODE_CLASS = "${properties.kcDarkModeClass}";
-          const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-          updateDarkMode(mediaQuery.matches);
-          mediaQuery.addEventListener("change", (event) => updateDarkMode(event.matches));
-
-          function updateDarkMode(isEnabled) {
-            const { classList } = document.documentElement;
-
-            if (isEnabled) {
-              classList.add(DARK_MODE_CLASS);
-            } else {
-              classList.remove(DARK_MODE_CLASS);
-            }
-          }
-      </script>
-    </#if>
     <#if !isSecureContext>
       <script type="module" src="${resourceCommonUrl}/vendor/web-crypto-shim/web-crypto-shim.js"></script>
     </#if>
@@ -165,8 +145,7 @@
           "updateEmailActionEnabled": ${updateEmailActionEnabled?c},
           "isViewGroupsEnabled": ${isViewGroupsEnabled?c},
           "isOid4VciEnabled": ${isOid4VciEnabled?c}
-        },
-        "scope": "${scope!""}"
+        }
       }
     </script>
   </body>
