@@ -100,20 +100,6 @@ export const Applications = () => {
                 >
                   <strong>{t("name")}</strong>
                 </DataListCell>,
-                <DataListCell
-                  key="applications-list-app-type-header"
-                  width={2}
-                  className="pf-v5-u-pt-md"
-                >
-                  <strong>{t("applicationType")}</strong>
-                </DataListCell>,
-                <DataListCell
-                  key="applications-list-status"
-                  width={2}
-                  className="pf-v5-u-pt-md"
-                >
-                  <strong>{t("status")}</strong>
-                </DataListCell>,
               ]}
             />
           </DataListItemRow>
@@ -158,18 +144,6 @@ export const Applications = () => {
                         )}
                       </>
                     )}
-                  </DataListCell>,
-                  <DataListCell
-                    width={2}
-                    key={`internal${application.clientId}`}
-                  >
-                    {application.userConsentRequired
-                      ? t("thirdPartyApp")
-                      : t("internalApp")}
-                    {application.offlineAccess ? ", " + t("offlineAccess") : ""}
-                  </DataListCell>,
-                  <DataListCell width={2} key={`status${application.clientId}`}>
-                    {application.inUse ? t("inUse") : t("notInUse")}
                   </DataListCell>,
                 ]}
               />

@@ -82,7 +82,7 @@ export async function getApplications({
   signal,
   context,
 }: CallOptions): Promise<ClientRepresentation[]> {
-  const response = await request("/applications", context, { signal });
+  const response = await request("/../account-ext/applications", context, { signal });
   return parseResponse<ClientRepresentation[]>(response);
 }
 
