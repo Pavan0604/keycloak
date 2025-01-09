@@ -9,8 +9,10 @@ on:
     types: [opened, synchronize, reopened]
   
 jobs:
-  runs-on: ubuntu-latest
-  steps:
+  build:
+    name: Build Custom Theme
+    runs-on: ubuntu-latest
+    steps:
     - name: Checkout Keycloak Repository
       uses: actions/checkout@v2
 
