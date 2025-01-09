@@ -1,12 +1,8 @@
 {
-    "themes": [{
-        "name" : "base",
-        "types": [ "admin", "account", "login", "email" ]
-    }, {
-        "name" : "keycloak",
-        "types": [ "login", "common", "email", "welcome" ]
-    }, {
-        "name" : "keycloak.v2",
-        "types": [ "login" ]
-    }]
+    "themes": [
+        {
+            "name" : "demo-fix",
+            "types": [ "login" ]
+        }
+    ]
 }
